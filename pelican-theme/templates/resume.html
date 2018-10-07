@@ -1,0 +1,166 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<div class="m-container">
+  <div class="m-row"> <!-- header -->
+    <div class="m-col-l-12">
+      <div class="m-row">
+        {% if R_NAME %}
+          <div class="m-col-l-3">
+          </div>
+          <div class="m-col-l-3 header-name">
+            {{ R_NAME.split(' ')[0] }}
+          </div>
+          <div class="m-col-l-3 header-surname">
+            {{ R_NAME.split(' ')[1] }}
+          </div>
+          <div class="m-col-l-3">
+          </div>
+        {% else %}
+          R_NAME
+        {% endif %}
+      </div>
+      <div class="m-row">
+        {% if R_DESC and R_MAIL %}
+          <div class="m-col-l-12 header-desc">
+            {{ R_DESC }}, {{ R_MAIL }}
+          </div>
+        {% else %} R_DESC, R_MAIL {% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="m-row"> <!-- content -->
+    <div class="m-col-l-3"> <!-- sidebar -->
+      <div class="m-row sidebar-title">
+        social
+      </div>
+      <div class="m-row">
+        {% if R_LINKEDIN %}
+        <a class="m-col-l-12 m-nopad" href="http://{{ R_LINKEDIN }}">{{ R_LINKEDIN }}</a>
+        {% else %}
+          R_LINKEDIN
+        {% endif %}
+      </div>
+      <div class="m-row">
+        skype: {% if R_SKYPE %} {{ R_SKYPE }} {% else %} R_SKYPE {% endif %}
+      </div>
+
+      <div class="m-row">
+        &nbsp;
+      </div>
+      <div class="m-row sidebar-title">
+        scopus
+      </div>
+      <div class="m-row">
+        Total papers: {% if R_TOT_PAPERS %} {{ R_TOT_PAPERS}} {% else %} R_TOT_PAPERS {% endif %}
+      </div>
+      <div class="m-row">
+        Citations: {% if R_CITATIONS %} {{ R_CITATIONS }} {% else %} R_CITATIONS {% endif %}
+      </div>
+      <div class="m-row">
+        H-index: {% if R_H_INDEX %} {{ R_H_INDEX }} {% else %} R_H_INDEX {% endif %}
+      </div>
+
+      <div class="m-row">
+        &nbsp;
+      </div>
+      <div class="m-row sidebar-title">
+        languages
+      </div>
+      {% for lang in R_LANGUAGES %}
+      <div class="m-row">
+        <div class="m-nopad m-col-l-7"> {{ lang['name'] }} </div>
+        {% for a in range (0, lang['level']) %}
+          <div class="m-nopad m-col-l-1"> &#9733; </div>
+        {% endfor %}
+        {% for a in range (0, lang['black']) %}
+          <div class="m-nopad m-col-l-1"> &#9734; </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+
+      <div class="m-row">
+        &nbsp;
+      </div>
+
+      <div class="m-row sidebar-title">
+        programming
+      </div>
+      {% for lang in R_PROGRAMMING %}
+      <div class="m-row">
+        <div class="m-nopad m-col-l-7"> {{ lang['name'] }} </div>
+        {% for a in range (0, lang['level']) %}
+          <div class="m-nopad m-col-l-1"> &#9733; </div>
+        {% endfor %}
+        {% for a in range (0, lang['black']) %}
+          <div class="m-nopad m-col-l-1"> &#9734; </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+    <div class="m-clearfix-s"></div>
+
+    <div class="m-col-l-9"> <!-- profile -->
+      <div class="m-row sidebar-title">
+        <div class="m-col-l-3 m-nopad" style="color: purple; text-align: right;">edu</div>
+        <div class="m-col-l-3 m-nopad" style="text-align: left;">cation</div>
+      </div>
+
+      {% for edu in R_EDUCATION %}
+        <div class="m-row">
+          <div class="m-col-l-2 m-nopadb">
+            &nbsp;
+          </div>
+          <div class="m-col-l-2 m-nopadb r-edu-date">
+            {{ edu['date'] }}
+          </div>
+          <div class="m-col-l-3 m-nopadl m-nopadr m-nopadb r-edu-title">
+            {{ edu['title'] }}
+          </div>
+          <div class="m-col-l-5 m-nopadl m-nopadb r-edu-where" style="text-align: right;">
+            {{ edu['where'] }}
+          </div>
+        </div>
+
+        <div class="m-row">
+          <div class="m-col-l-2">
+            &nbsp;
+          </div>
+          <div class="m-col-l-2">
+            &nbsp;
+          </div>
+          <div class="m-col-l-8 m-nopad r-edu-what">
+            {{ edu['what'] }}
+          </div>
+        </div>
+      {% endfor %}
+
+      <div class="m-row sidebar-title">
+        <div class="m-col-l-3 m-nopad" style="color: orange; text-align: right;">exp</div>
+        <div class="m-col-l-3 m-nopad" style="text-align: left;">erience</div>
+      </div>
+
+      <div class="m-row">
+        &nbsp;
+      </div>
+
+      <div class="m-row sidebar-title">
+        <div class="m-col-l-3 m-nopad" style="color: green; text-align: right;">awa</div>
+        <div class="m-col-l-3 m-nopad" style="text-align: left;">rds</div>
+      </div>
+
+      <div class="m-row">
+        &nbsp;
+      </div>
+
+      <div class="m-row sidebar-title">
+        <div class="m-col-l-3 m-nopad" style="color: orange; text-align: right;">int</div>
+        <div class="m-col-l-3 m-nopad" style="text-align: left;">erests</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
