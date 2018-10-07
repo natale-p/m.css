@@ -47,8 +47,8 @@
   <div class="m-container">
     <div class="m-row">
       <a href="{{ SITEURL }}/" id="m-navbar-brand" class="m-col-t-9 m-col-m-none m-left-m{% if page and page.landing and page.cover and page.hide_navbar_brand == 'True' %} m-navbar-brand-hidden{% endif %}">
-        {%- if M_SITE_LOGO %}<img src="{{ M_SITE_LOGO|format_siteurl|e }}" alt="" />{% endif -%}
         {{- (M_SITE_LOGO_TEXT or SITENAME)|e -}}
+        {%- if M_SITE_LOGO %}<img class="site-icon" style="width: 50px; margin-left: 20px; margin-bottom:-10px;" src="{{ M_SITE_LOGO|e }}" />{% endif -%}
       </a>
       {% if M_LINKS_NAVBAR1 or M_LINKS_NAVBAR2 %}
       <a id="m-navbar-show" href="#navigation" title="Show navigation" class="m-col-t-3 m-hide-m m-text-right"></a>
