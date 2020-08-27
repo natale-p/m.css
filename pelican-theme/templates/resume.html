@@ -9,11 +9,8 @@
         {% if R_NAME %}
           <div class="m-col-l-3">
           </div>
-          <div class="m-col-l-3 header-name">
-            {{ R_NAME.split(' ')[0] }}
-          </div>
-          <div class="m-col-l-3 header-surname">
-            {{ R_NAME.split(' ')[1] }}
+          <div class="m-col-l-6 header-name">
+            {{ R_NAME.split(' ')[0] }} <b> {{ R_NAME.split(' ')[1] }} </b>
           </div>
           <div class="m-col-l-3">
           </div>
@@ -31,7 +28,7 @@
     </div>
   </div>
   <div class="m-row"> <!-- content -->
-    <div class="m-col-l-3"> <!-- sidebar -->
+    <div class="m-col-l-2"> <!-- sidebar -->
       <div class="m-row sidebar-title">
         social
       </div>
@@ -70,12 +67,12 @@
       </div>
       {% for lang in R_LANGUAGES %}
       <div class="m-row">
-        <div class="m-nopad m-col-l-7"> {{ lang['name'] }} </div>
+        <div class="m-nopad m-col-t-7"> {{ lang['name'] }} </div>
         {% for a in range (0, lang['level']) %}
-          <div class="m-nopad m-col-l-1"> &#9733; </div>
+          <div class="m-nopad m-col-t-1"> &#9733; </div>
         {% endfor %}
         {% for a in range (0, lang['black']) %}
-          <div class="m-nopad m-col-l-1"> &#9734; </div>
+          <div class="m-nopad m-col-t-1"> &#9734; </div>
         {% endfor %}
       </div>
       {% endfor %}
@@ -89,74 +86,110 @@
       </div>
       {% for lang in R_PROGRAMMING %}
       <div class="m-row">
-        <div class="m-nopad m-col-l-7"> {{ lang['name'] }} </div>
+        <div class="m-nopad m-col-t-7"> {{ lang['name'] }} </div>
         {% for a in range (0, lang['level']) %}
-          <div class="m-nopad m-col-l-1"> &#9733; </div>
+          <div class="m-nopad m-col-t-1"> &#9733; </div>
         {% endfor %}
         {% for a in range (0, lang['black']) %}
-          <div class="m-nopad m-col-l-1"> &#9734; </div>
+          <div class="m-nopad m-col-t-1"> &#9734; </div>
         {% endfor %}
       </div>
       {% endfor %}
+
+      <div class="m-row">
+        &nbsp;
+      </div>
+
+      <div class="m-row sidebar-title">
+        oss
+      </div>
+
+      <div class="m-row">
+        <img class="" style="display: block; margin-left: auto; margin-right: auto; width: 70%;" src="{{ SITEURL }}/images/qt.png" />
+      </div>
+      <div class="m-row">
+        <img class="" style="display: block; margin-left: auto; margin-right: auto; width: 100%;" src="{{ SITEURL }}/images/ns3.png" />
+      </div>
+      <div class="m-row">
+        <a href="https://github.com/natale-p">
+          <img class="" style="display: block; margin-left: auto; margin-right: auto; width: 50%;" src="{{ SITEURL }}/images/github.jpg" />
+        </a>
+      </div>
+
     </div>
+
     <div class="m-clearfix-s"></div>
+
+    <div class="m-col-l-1">
+      &nbsp;
+    </div>
 
     <div class="m-col-l-9"> <!-- profile -->
       <div class="m-row sidebar-title">
-        <div class="m-col-l-3 m-nopad" style="color: purple; text-align: right;">edu</div>
-        <div class="m-col-l-3 m-nopad" style="text-align: left;">cation</div>
+        <span style="color: purple;">edu</span>cation
       </div>
 
       {% for edu in R_EDUCATION %}
         <div class="m-row">
-          <div class="m-col-l-2 m-nopadb">
-            &nbsp;
-          </div>
-          <div class="m-col-l-2 m-nopadb r-edu-date">
+          <div class="m-col-t-3 m-nopadb r-edu-date">
             {{ edu['date'] }}
           </div>
-          <div class="m-col-l-3 m-nopadl m-nopadr m-nopadb r-edu-title">
+          <div class="m-col-t-8 m-col-s-3 m-nopadr m-nopadb r-edu-title">
             {{ edu['title'] }}
           </div>
-          <div class="m-col-l-5 m-nopadl m-nopadb r-edu-where" style="text-align: right;">
+          <div class="m-col-t-12 m-col-s-5 m-nopadl m-nopadb r-edu-where" style="text-align: right;">
             {{ edu['where'] }}
           </div>
-        </div>
-
-        <div class="m-row">
-          <div class="m-col-l-2">
-            &nbsp;
-          </div>
-          <div class="m-col-l-2">
-            &nbsp;
-          </div>
-          <div class="m-col-l-8 m-nopad r-edu-what">
+          <div class="m-col-t-12 m-col-s-8 m-push-s-3 m-nopadt r-edu-what">
             {{ edu['what'] }}
           </div>
         </div>
+
       {% endfor %}
 
       <div class="m-row sidebar-title">
-        <div class="m-col-l-3 m-nopad" style="color: orange; text-align: right;">exp</div>
-        <div class="m-col-l-3 m-nopad" style="text-align: left;">erience</div>
+        <span style="color: orange;">exp</span>erience
       </div>
 
-      <div class="m-row">
-        &nbsp;
-      </div>
+      {% for job in R_JOBS %}
+        <div class="m-row">
+          <div class="m-col-t-3 m-nopadb r-edu-date">
+            {{ job['date'] }}
+          </div>
+          <div class="m-col-t-8 m-col-s-3 m-nopadr m-nopadb r-edu-title">
+            {{ job['company'] }}
+          </div>
+          <div class="m-col-t-12 m-col-s-5 m-nopadl m-nopadb r-edu-where" style="text-align: right;">
+            {{ job['job_title'] }}
+          </div>
+          <div class="m-col-t-12 m-col-s-8 m-push-s-3 m-nopadt r-edu-what">
+            {{ job['details'] }}
+          </div>
+        </div>
+
+      {% endfor %}
 
       <div class="m-row sidebar-title">
-        <div class="m-col-l-3 m-nopad" style="color: green; text-align: right;">awa</div>
-        <div class="m-col-l-3 m-nopad" style="text-align: left;">rds</div>
+        <span style="color: green;">awa</span>rds
       </div>
 
-      <div class="m-row">
-        &nbsp;
-      </div>
+      {% for award in R_AWARDS %}
+        <div class="m-row">
+          <div class="m-col-t-3 m-nopadb r-edu-date">
+            {{ award['date'] }}
+          </div>
+          <div class="m-col-t-12 m-col-s-8 m-nopadr m-nopadb r-edu-title">
+            {{ award['award_title'] }}
+          </div>
+          <div class="m-col-t-12 m-col-s-8 m-push-s-3 m-nopadt r-edu-what">
+            {{ award['details'] }}
+          </div>
+        </div>
+
+      {% endfor %}
 
       <div class="m-row sidebar-title">
-        <div class="m-col-l-3 m-nopad" style="color: orange; text-align: right;">int</div>
-        <div class="m-col-l-3 m-nopad" style="text-align: left;">erests</div>
+        <span style="color: blue; ">int</span>erests
       </div>
 
     </div>

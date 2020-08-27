@@ -1,11 +1,6 @@
 .header-name {
   font-size: 60px;
-}
-
-.header-surname {
-  font-weight: bold;
-  font-size: 60px;
-  margin-left: -35px;
+  text-align: center
 }
 
 .header-desc{
@@ -15,7 +10,6 @@
 
 .sidebar-title {
   font-weight: bold;
-  text-align: right;
   font-size: 25px;
   font-family: monospace;
 }
@@ -30,6 +24,7 @@
 .r-edu-where {
   color: grey;
   text-size: 15px;
+  text-align: center;
 }
 
 .r-edu-what {
