@@ -131,20 +131,20 @@
 
       {% for edu in R_EDUCATION %}
         <div class="m-row">
-          <div class="m-col-t-3 m-nopadb r-edu-date">
+          <div class="m-col-t-3 m-col-s-3 m-nopadb r-edu-date">
             {{ edu['date'] }}
           </div>
           <div class="m-col-t-8 m-col-s-3 m-nopadr m-nopadb r-edu-title">
             {{ edu['title'] }}
           </div>
-          <div class="m-col-t-12 m-col-s-5 m-nopadl m-nopadb r-edu-where" style="text-align: right;">
+          <div class="m-col-t-12 m-col-s-6 m-nopadl m-nopadb r-edu-where" style="text-align: right;">
             {{ edu['where'] }}
           </div>
-          <div class="m-col-t-12 m-col-s-8 m-push-s-3 m-nopadt r-edu-what">
+          <div class="m-col-t-12 m-col-s-9 m-push-s-3 m-nopadt r-edu-what">
             {{ edu['what'] }}
           </div>
         </div>
-
+        <div class="m-clearfix-m"></div>
       {% endfor %}
 
       <div class="m-row sidebar-title">
@@ -153,19 +153,20 @@
 
       {% for job in R_JOBS %}
         <div class="m-row">
-          <div class="m-col-t-3 m-nopadb r-edu-date">
+          <div class="m-col-t-3 m-col-s-3 m-nopadb r-edu-date">
             {{ job['date'] }}
           </div>
           <div class="m-col-t-8 m-col-s-3 m-nopadr m-nopadb r-edu-title">
             {{ job['company'] }}
           </div>
-          <div class="m-col-t-12 m-col-s-5 m-nopadl m-nopadb r-edu-where" style="text-align: right;">
+          <div class="m-col-t-12 m-col-s-6 m-nopadl m-nopadb r-edu-where" style="text-align: right;">
             {{ job['job_title'] }}
           </div>
-          <div class="m-col-t-12 m-col-s-8 m-push-s-3 m-nopadt r-edu-what">
+          <div class="m-col-t-12 m-col-s-9 m-push-s-3 m-nopadt r-edu-what">
             {{ job['details'] }}
           </div>
         </div>
+        <div class="m-clearfix-m"></div>
 
       {% endfor %}
 
