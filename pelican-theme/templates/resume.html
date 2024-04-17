@@ -131,16 +131,18 @@
 
       {% for edu in R_EDUCATION %}
         <div class="m-row">
-          <div class="m-col-t-3 m-col-s-3 m-nopadb r-edu-date">
+          <div class="m-col-t-2 m-nopadb r-edu-date">
             {{ edu['date'] }}
           </div>
-          <div class="m-col-t-8 m-col-s-3 m-nopadr m-nopadb r-edu-title">
+          <div class="m-col-t-4 m-nopadr m-nopadb r-edu-title">
             {{ edu['title'] }}
           </div>
-          <div class="m-col-t-12 m-col-s-6 m-nopadl m-nopadb r-edu-where" style="text-align: right;">
+          <div class="m-col-t-6 m-nopadl m-nopadb r-edu-where" style="text-align: right;">
             {{ edu['where'] }}
           </div>
-          <div class="m-col-t-12 m-col-s-9 m-push-s-3 m-nopadt r-edu-what">
+        </div>
+        <div class="m-row">
+          <div class="m-col-t-10 m-push-t-2 m-nopadb m-nopadt r-edu-what">
             {{ edu['what'] }}
           </div>
         </div>
@@ -153,16 +155,16 @@
 
       {% for job in R_JOBS %}
         <div class="m-row">
-          <div class="m-col-t-3 m-col-s-3 m-nopadb r-edu-date">
+          <div class="m-col-t-2 m-nopadt m-nopadb r-edu-date">
             {{ job['date'] }}
           </div>
-          <div class="m-col-t-8 m-col-s-3 m-nopadr m-nopadb r-edu-title">
+          <div class="m-col-t-4 m-nopadt m-nopadb r-edu-title">
             {{ job['company'] }}
           </div>
-          <div class="m-col-t-12 m-col-s-6 m-nopadl m-nopadb r-edu-where" style="text-align: right;">
+          <div class="m-col-t-6 m-nopadl m-nopadt m-nopadb r-edu-where" style="text-align: right;">
             {{ job['job_title'] }}
           </div>
-          <div class="m-col-t-12 m-col-s-9 m-push-s-3 m-nopadt r-edu-what">
+          <div class="m-col-t-10 m-nopadt r-edu-what">
             {{ job['details'] }}
           </div>
         </div>
@@ -176,16 +178,17 @@
 
       {% for award in R_AWARDS %}
         <div class="m-row">
-          <div class="m-col-t-3 m-nopadb r-edu-date">
+          <div class="m-col-t-2 m-nopadt m-nopadb r-edu-date">
             {{ award['date'] }}
           </div>
-          <div class="m-col-t-12 m-col-s-8 m-nopadr m-nopadb r-edu-title">
+          <div class="m-col-t-10 m-nopadt m-nopadb r-edu-title">
             {{ award['award_title'] }}
           </div>
-          <div class="m-col-t-12 m-col-s-8 m-push-s-3 m-nopadt r-edu-what">
+          <div class="m-col-t-10 m-nopadt m-push-t-2 r-edu-what">
             {{ award['details'] }}
           </div>
         </div>
+        <div class="m-clearfix-m"></div>
 
       {% endfor %}
 
