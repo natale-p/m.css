@@ -341,7 +341,7 @@ body { margin: 0; }
 
 html {
   font-size: 16px;
-  background-color: #2f363f;
+  background-color: #1f2933;
 }
 body {
   font-family: 'Source Sans Pro', sans-serif;
@@ -430,7 +430,7 @@ pre, code {
   font-family: 'Source Code Pro', monospace, monospace, monospace;
   font-size: 0.9em;
   color: #e6e6e6;
-  background-color: #282e36;
+  background-color: #212b36;
 }
 pre.m-console, code.m-console {
   color: #e6e6e6;
@@ -585,7 +585,7 @@ dl.m-footnote dd span.m-footnote a {
   padding: 1rem;
 }
 .m-frame {
-  background-color: #2f363f;
+  background-color: #1f2933;
   border-style: solid;
   border-width: 0.125rem;
   border-radius: 0.2rem;
@@ -740,7 +740,7 @@ table.m-table tr.m-info td, table.m-table td.m-info,
 table.m-table tr.m-info th, table.m-table th.m-info,
 table.m-table tr.m-dim td, table.m-table td.m-dim,
 table.m-table tr.m-dim th, table.m-table th.m-dim {
-  border-color: #2f363f;
+  border-color: #1f2933;
 }
 .m-note pre, .m-note code,
 table.m-table tr.m-default pre, table.m-table tr.m-default code,
@@ -764,7 +764,7 @@ table.m-table th.m-info pre, table.m-table th.m-info code,
 table.m-table tr.m-dim pre, table.m-table tr.m-dim code,
 table.m-table td.m-dim pre, table.m-table td.m-dim code,
 table.m-table th.m-dim pre, table.m-table th.m-dim code {
-  background-color: rgba(34, 39, 46, 0.5);
+  background-color: rgba(33, 43, 54, 0.8);
 }
 img.m-image, svg.m-image, video.m-image {
   display: block;
@@ -883,7 +883,7 @@ figure.m-figure.m-fullwidth::after {
   border-radius: 0.2rem;
 }
 .m-code-figure::before {
-  border-color: #282e36;
+  border-color: #212b36;
 }
 .m-console-figure::before {
   border-color: #1a1c1d;
@@ -919,10 +919,10 @@ figure.m-figure figcaption .m-figure-description {
   font-size: 1rem;
 }
 figure.m-figure figcaption .m-figure-description a {
-  text-decoration: underline;
+  text-decoration: none;
 }
 .m-imagegrid > div {
-  background-color: #2f363f;
+  background-color: #1f2933;
 }
 .m-imagegrid > div > figure {
   display: block;
@@ -939,7 +939,7 @@ figure.m-figure figcaption .m-figure-description a {
   left: 0;
   width: 100%;
   height: 100%;
-  border-color: #2f363f;
+  border-color: #1f2933;
   border-style: solid;
   border-width: 0.25rem;
   padding: 0.5rem;
@@ -1841,7 +1841,7 @@ li:last-child > div.m-plot:last-child, li:last-child > div.m-plot.m-nopadb {
 
 body > header > nav {
   width: 100%;
-  background-color: #22272e;
+  background-color: #2f3841;
   min-height: 3rem;
 }
 body > header > nav.m-navbar-landing,
@@ -1853,17 +1853,17 @@ body > header > nav.m-navbar-landing {
   opacity: 0.8;
 }
 body > header > nav.m-navbar-cover {
-  background-color: rgba(34, 39, 46, 0.25);
+  background-color: rgba(47, 56, 65, 0.25);
   opacity: 1;
 }
 body > header > nav.m-navbar-landing:hover,
 body > header > nav.m-navbar-cover:hover {
-  background-color: rgba(34, 39, 46, 0.75);
+  background-color: rgba(47, 56, 65, 0.75);
   opacity: 1;
 }
 body> header > nav.m-navbar-landing:target,
 body> header > nav.m-navbar-cover:target {
-  background-color: #22272e;
+  background-color: #2f3841;
   opacity: 1;
 }
 body > header > nav.m-navbar-landing #m-navbar-brand.m-navbar-brand-hidden {
@@ -1956,7 +1956,7 @@ body > header > nav #m-navbar-collapse li a:hover,
 body > header > nav #m-navbar-collapse li a:focus,
 body > header > nav #m-navbar-collapse li a:active {
   border-color: #a5c9ea;
-  background-color: #292f37;
+  background-color: #29323a;
 }
 body > header > nav.m-navbar-landing #m-navbar-collapse li a:hover,
 body > header > nav.m-navbar-cover #m-navbar-collapse li a:hover,
@@ -1964,7 +1964,7 @@ body > header > nav.m-navbar-landing #m-navbar-collapse li a:focus,
 body > header > nav.m-navbar-cover #m-navbar-collapse li a:focus,
 body > header > nav.m-navbar-landing #m-navbar-collapse li a:active,
 body > header > nav.m-navbar-cover #m-navbar-collapse li a:active {
-  background-color: rgba(41, 47, 55, 0.5);
+  background-color: rgba(41, 50, 58, 0.5);
 }
 body > header > nav #m-navbar-hide {
   display: none;
@@ -1996,7 +1996,7 @@ body > header > nav:target #m-navbar-hide {
     padding-bottom: 0;
   }
   body > header > nav #m-navbar-collapse li ol {
-    background-color: #22272e;
+    background-color: #2f3841;
   }
   body > header > nav #m-navbar-collapse ol ol li {
     margin-left: 0;
@@ -2176,7 +2176,7 @@ article#m-jumbo {
   margin-top: -1rem;
 }
 #m-landing-cover, #m-cover-image > div, article#m-jumbo > header #m-jumbo-cover {
-  background: linear-gradient(transparent 0%, transparent 50%, #2f363f 100%);
+  background: linear-gradient(transparent 0%, transparent 50%, #1f2933 100%);
   width: 100%;
   height: 100%;
 }
@@ -2485,7 +2485,7 @@ article:last-child, article section:last-child { margin-bottom: 0; }
 @media screen and (min-width: 576px) {
   .m-container-inflatable section:target .m-center-s > figure.m-code-figure::before,
   .m-container-inflatable section:target .m-right-s > figure.m-code-figure::before {
-    border-color: #282e36;
+    border-color: #212b36;
   }
   .m-container-inflatable section:target .m-center-s > figure.m-console-figure::before,
   .m-container-inflatable section:target .m-right-s > figure.m-console-figure::before {
@@ -2495,7 +2495,7 @@ article:last-child, article section:last-child { margin-bottom: 0; }
 @media screen and (min-width: 768px) {
   .m-container-inflatable section:target .m-center-m > figure.m-code-figure::before,
   .m-container-inflatable section:target .m-right-m > figure.m-code-figure::before {
-    border-color: #282e36;
+    border-color: #212b36;
   }
   .m-container-inflatable section:target .m-center-m > figure.m-console-figure::before,
   .m-container-inflatable section:target .m-right-m > figure.m-console-figure::before {
@@ -2505,7 +2505,7 @@ article:last-child, article section:last-child { margin-bottom: 0; }
 @media screen and (min-width: 992px) {
   .m-container-inflatable section:target .m-center-l > figure.m-code-figure::before,
   .m-container-inflatable section:target .m-right-l > figure.m-code-figure::before {
-    border-color: #282e36;
+    border-color: #212b36;
   }
   .m-container-inflatable section:target .m-center-l > figure.m-console-figure::before,
   .m-container-inflatable section:target .m-right-l > figure.m-console-figure::before {

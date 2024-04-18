@@ -28,11 +28,11 @@
   --font: 'Source Sans Pro', sans-serif;
   --code-font: 'Source Code Pro', monospace;
   --font-size: 16px;
-  --code-font-size: 0.9em; /* *not* rem, so it follows surrounding font size */
+  --code-font-size: 0.9em;
   --line-height: normal;
   --paragraph-indent: 1.5rem;
   --paragraph-align: justify;
-  --link-decoration: underline;
+  --link-decoration: none; /* Changed to remove underline */
   --link-decoration-nav: none;
   --link-decoration-heading: none;
   --nav-brand-case: uppercase;
@@ -46,7 +46,7 @@
   --border-radius: 0.2rem;
 
   /* Basics */
-  --background-color: #2f363f;
+  --background-color: #1f2933; /* Adjusted for better contrast */
   --color: #dcdcdc;
   --line-color: #405363;
   --link-color: #5b9dd9;
@@ -57,10 +57,8 @@
   --code-inverted-color: rgba(230, 230, 230, 0.33);
   --console-color: var(--code-color);
   --console-inverted-color: var(--code-inverted-color);
-  /* This is simply color-picked --code-note-background-color on top of
-     --background-color */
-  --code-background-color: #282e36;
-  --code-note-background-color: rgba(34, 39, 46, 0.5);
+  --code-background-color: #212b36; /* Adjusted for better readability */
+  --code-note-background-color: rgba(33, 43, 54, 0.8); /* Adjusted transparency for better visibility */
   --console-background-color: #1a1c1d;
   --button-background-color: #22272e;
 
@@ -68,14 +66,14 @@
   --header-border-width: 0 0 0.25rem 0;
   --header-color: #ffffff;
   --header-breadcrumb-color: #747474; /* same as --dim-color */
-  --header-background-color: #22272e;
-  --header-background-color-landing: rgba(34, 39, 46, 0.75);
-  --header-background-color-jumbo: rgba(34, 39, 46, 0.25);
+  --header-background-color: #2f3841; /* Adjusted for better contrast */
+  --header-background-color-landing: rgba(47, 56, 65, 0.75); /* Adjusted for better visibility */
+  --header-background-color-jumbo: rgba(47, 56, 65, 0.25); /* Adjusted for better visibility */
   --header-link-color: #ffffff;
   --header-link-active-color: #a5c9ea;
   --header-link-current-color: #5b9dd9;
-  --header-link-active-background-color: #292f37;
-  --header-link-active-background-color-semi: rgba(41, 47, 55, 0.5);
+  --header-link-active-background-color: #29323a; /* Adjusted for better contrast */
+  --header-link-active-background-color-semi: rgba(41, 50, 58, 0.5); /* Adjusted for better visibility */
 
   /* Footer */
   --footer-font-size: 0.85rem;
@@ -87,7 +85,7 @@
   /* Cover image */
   --cover-image-background-color: #0f1217;
 
-  /* Search (used only by m-documentation.css) */
+  /* Search */
   --search-overlay-color: var(--header-background-color-landing);
   --search-background-color: var(--header-background-color);
 
@@ -157,3 +155,4 @@
   --dim-filled-link-active-color: #747474;
   --dim-button-active-color: #acacac;
 }
+
