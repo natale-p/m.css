@@ -29,18 +29,21 @@
   </div>
   <div class="m-row"> <!-- content -->
     <div class="m-col-l-2"> <!-- sidebar -->
-      <div class="m-row sidebar-title">
+      <div class="m-row sidebar-title m-nopadb">
         social
       </div>
       <div class="m-row">
         {% if R_LINKEDIN %}
-        <a class="m-col-l-12 m-nopad" href="http://{{ R_LINKEDIN }}">{{ R_LINKEDIN }}</a>
+        <a class="m-col-l-12 m-nopadb m-nopadt" href="http://{{ R_LINKEDIN }}">{{ R_LINKEDIN }}</a>
         {% else %}
           R_LINKEDIN
         {% endif %}
       </div>
       <div class="m-row">
-        skype: {% if R_SKYPE %} {{ R_SKYPE }} {% else %} R_SKYPE {% endif %}
+        <a class="m-col-l-12 m-nopadt m-nopadb" href="https://github.com/natale-p">github.com/natale-p</a>
+      </div>
+      <div class="m-row">
+        <div class="m-col-l-12 m-nopadt">skype: {% if R_SKYPE %} {{ R_SKYPE }} {% else %} R_SKYPE {% endif %}</div>
       </div>
 
       <div class="m-row">
@@ -50,13 +53,19 @@
         scopus
       </div>
       <div class="m-row">
-        Total papers: {% if R_TOT_PAPERS %} {{ R_TOT_PAPERS}} {% else %} R_TOT_PAPERS {% endif %}
+        <div class="m-col-l-12 m-nopadt m-nopadb">
+          Total papers: {% if R_TOT_PAPERS %} {{ R_TOT_PAPERS}} {% else %} R_TOT_PAPERS {% endif %}
+        </div>
       </div>
       <div class="m-row">
-        Citations: {% if R_CITATIONS %} {{ R_CITATIONS }} {% else %} R_CITATIONS {% endif %}
+        <div class="m-col-l-12 m-nopadt m-nopadb">
+          Citations: {% if R_CITATIONS %} {{ R_CITATIONS }} {% else %} R_CITATIONS {% endif %}
+        </div>
       </div>
       <div class="m-row">
-        H-index: {% if R_H_INDEX %} {{ R_H_INDEX }} {% else %} R_H_INDEX {% endif %}
+        <div class="m-col-l-12 m-nopadt">
+          H-index: {% if R_H_INDEX %} {{ R_H_INDEX }} {% else %} R_H_INDEX {% endif %}
+        </div>
       </div>
 
       <div class="m-row">
@@ -67,12 +76,12 @@
       </div>
       {% for lang in R_LANGUAGES %}
       <div class="m-row">
-        <div class="m-nopad m-col-t-7"> {{ lang['name'] }} </div>
+        <div class="m-nopadt m-nopadb m-col-t-7"> {{ lang['name'] }} </div>
         {% for a in range (0, lang['level']) %}
           <div class="m-nopad m-col-t-1"> &#9733; </div>
         {% endfor %}
         {% for a in range (0, lang['black']) %}
-          <div class="m-nopad m-col-t-1"> &#9734; </div>
+          <div class="m-nopadt m-nopadb m-col-t-1"> &#9734; </div>
         {% endfor %}
       </div>
       {% endfor %}
@@ -86,7 +95,7 @@
       </div>
       {% for lang in R_PROGRAMMING %}
       <div class="m-row">
-        <div class="m-nopad m-col-t-7"> {{ lang['name'] }} </div>
+        <div class="m-nopadt m-nopadb m-col-t-7"> {{ lang['name'] }} </div>
         {% for a in range (0, lang['level']) %}
           <div class="m-nopad m-col-t-1"> &#9733; </div>
         {% endfor %}
@@ -104,18 +113,15 @@
         oss
       </div>
 
-      <div class="m-row m-show-m">
-        <img class="m-col-l-6" style="display: block; margin-left: auto; margin-right: auto; width: 70%;" src="{{ SITEURL }}/images/qt.png" />
+      <div class="m-frame m-row m-show-m">
+        <img class="m-image" src="{{ SITEURL }}/images/qt.png" />
       </div>
-      <div class="m-row m-show-m">
-        <img class="m-col-l-6" style="display: block; margin-left: auto; margin-right: auto; width: 100%;" src="{{ SITEURL }}/images/ns3.png" />
+      <div class="m-frame m-row m-show-m">
+        <img class="m-image" src="{{ SITEURL }}/images/ns3.png" />
       </div>
-      <div class="m-row m-show-m">
-        <a href="https://github.com/natale-p">
-          <img class="m-col-l-6" style="display: block; margin-left: auto; margin-right: auto; width: 50%;" src="{{ SITEURL }}/images/github.jpg" />
-        </a>
+      <div class="m-frame m-row m-show-m">
+        <img class="m-image" src="{{ SITEURL }}/images/webrtc.png" />
       </div>
-
     </div>
 
     <div class="m-clearfix-s"></div>
@@ -142,7 +148,7 @@
           </div>
         </div>
         <div class="m-row">
-          <div class="m-col-t-10 m-push-t-2 m-nopadb m-nopadt r-edu-what">
+          <div class="m-col-t-10 m-push-t-2 m-nopadt r-edu-what">
             {{ edu['what'] }}
           </div>
         </div>
@@ -164,7 +170,9 @@
           <div class="m-col-t-6 m-nopadl m-nopadt m-nopadb r-edu-where" style="text-align: right;">
             {{ job['job_title'] }}
           </div>
-          <div class="m-col-t-10 m-nopadt r-edu-what">
+        </div>
+        <div class="m-row">
+          <div class="m-col-t-10 m-push-t-2 m-nopadt r-edu-what">
             {{ job['details'] }}
           </div>
         </div>
@@ -184,6 +192,8 @@
           <div class="m-col-t-10 m-nopadt m-nopadb r-edu-title">
             {{ award['award_title'] }}
           </div>
+        </div>
+        <div class="m-row">
           <div class="m-col-t-10 m-nopadt m-push-t-2 r-edu-what">
             {{ award['details'] }}
           </div>
