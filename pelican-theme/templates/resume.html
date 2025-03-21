@@ -132,30 +132,6 @@
 
     <div class="m-col-l-9"> <!-- profile -->
       <div class="m-row sidebar-title">
-        <span style="color: purple;">edu</span>cation
-      </div>
-
-      {% for edu in R_EDUCATION %}
-        <div class="m-row">
-          <div class="m-col-t-2 m-nopadb r-edu-date">
-            {{ edu['date'] }}
-          </div>
-          <div class="m-col-t-4 m-nopadr m-nopadb r-edu-title">
-            {{ edu['title'] }}
-          </div>
-          <div class="m-col-t-6 m-nopadl m-nopadb r-edu-where" style="text-align: right;">
-            {{ edu['where'] }}
-          </div>
-        </div>
-        <div class="m-row">
-          <div class="m-col-t-10 m-push-t-2 m-nopadt r-edu-what">
-            {{ edu['what'] }}
-          </div>
-        </div>
-        <div class="m-clearfix-m"></div>
-      {% endfor %}
-
-      <div class="m-row sidebar-title">
         <span style="color: orange;">exp</span>erience
       </div>
 
@@ -178,6 +154,30 @@
         </div>
         <div class="m-clearfix-m"></div>
 
+      {% endfor %}
+
+        <div class="m-row sidebar-title">
+          <span style="color: purple;">edu</span>cation
+        </div>
+
+      {% for edu in R_EDUCATION %}
+        <div class="m-row">
+          <div class="m-col-t-2 m-nopadb r-edu-date">
+            {{ edu['date'] }}
+          </div>
+          <div class="m-col-t-4 m-nopadr m-nopadb r-edu-title">
+            {{ edu['title'] }}
+          </div>
+          <div class="m-col-t-6 m-nopadl m-nopadb r-edu-where" style="text-align: right;">
+            {{ edu['where'] }}
+          </div>
+        </div>
+        <div class="m-row">
+          <div class="m-col-t-10 m-push-t-2 m-nopadt r-edu-what">
+            {{ edu['what'] }}
+          </div>
+        </div>
+        <div class="m-clearfix-m"></div>
       {% endfor %}
 
       <div class="m-row sidebar-title">
